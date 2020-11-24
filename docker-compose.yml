@@ -7,14 +7,14 @@ services:
     build: .
       command: python3 manage.py migrate
       volumes:
-        - .:/home/jim/Tjs/MG
+        - .:/home/jim/Tjs/Docke
       depends_on:
         - db
   web:
     build: .
-    command: python3 prime.py runserver 0.0.0.0:8080
+    command: python3 manage.py runserver 0.0.0.0:8080
     volumes:
-      - .:/home/jim/Tjs/MG
+      - .:/home/jim/Tjs/Docke
     ports:
       - "8080:8000"
     depends_on:

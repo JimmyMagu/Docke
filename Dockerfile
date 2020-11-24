@@ -1,6 +1,6 @@
 FROM python:3
 ENV PYTHONUNBUFFERED=1
-WORKDIR /code
-COPY requirements.txt /code/
-RUN pip install -requirements.txt
-COPY . /code/
+WORKDIR /home/jim/Tjs/Docke
+COPY requirements.txt /home/jim/Tjs/Docke
+RUN pip install -r requirements.txt
+COPY . home/jim/Tjs/Docke
